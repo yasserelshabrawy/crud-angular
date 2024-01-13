@@ -1,0 +1,35 @@
+{
+  "header": {
+    "allTask": "all task",
+    "users": "users",
+    "logOut": "Logout"
+  },
+  "tasks": {
+    "addTask": "add task",
+    "addNewTask": " add new task ",
+    "user": "user",
+    "title": " title",
+    "selectImage": "select image ",
+    "deadLineDate": " deadline date",
+    "desc": " description",
+    "create": " create",
+    "update": " update",
+    "close": " close"
+  },
+  "table": {
+    "index": "index",
+    "title": " title",
+    "image": " image",
+    "deadLineDate": " deadline date",
+    "desc": " description",
+    "update": " update",
+    "delete": "delete",
+    "compelete": "compelete",
+    "details":"details"
+  },
+  "users": {},
+  "general": {
+    "loading": "loading"
+  },
+  "toaster": {}
+}

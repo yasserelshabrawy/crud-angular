@@ -1,0 +1,35 @@
+{
+  "header": {
+    "allTask":"جميع المهمات",
+    "users": "المستخدمين",
+    "logOut": "تسجيل خروج"
+  },
+  "tasks": {
+    "addTask":"إضافة مهمة",
+    "addNewTask":"إضافة مهمة جديدة",
+    "user":"المستخدم",
+    "title":" عنوان",
+    "selectImage":" اختيار صورة",
+    "deadLineDate":" التاريخ",
+    "desc":" وصف",
+    "create":" إنشاء",
+    "update":" تحديث",
+    "close":" إغلاق"
+  },
+  "table":{
+    "index": "الرقم",
+    "title": " عنوان",
+    "image": " صورة",
+    "deadLineDate": " التاريخ",
+    "desc": " وصف",
+    "update":" تحديث",
+    "delete": "مسح",
+    "compelete":"اكتمل",
+    "details":"تفاصيل"
+  },
+  "users": {},
+  "general": {
+    "loading": "انتظار"
+  },
+  "toaster": {}
+}

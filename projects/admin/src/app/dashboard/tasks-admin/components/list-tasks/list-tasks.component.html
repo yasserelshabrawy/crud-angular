@@ -1,0 +1,73 @@
+<div class="mt-4">
+  <div class="d-flex justify-content-end my-2">
+    <button class="addTask" mat-raised-button (click)="addTask()">
+      {{'tasks.addTask'| translate}}
+    </button>
+  </div>
+
+  <div class="row justify-content-center align-items-center my-3">
+    <div class="col-md-3">
+      <input
+        type="text"
+        class="form-control"
+        (keyup)="search($event)"
+        placeholder="Search"
+      />
+    </div>
+    <div class="col-md-3">
+      <mat-select
+        class="form-control"
+        placeholder="User"
+        (selectionChange)="selectUser($event)"
+      >
+        <mat-option *ngFor="let user of users" [value]="user?.id">
+          {{ user?.name }}
+        </mat-option>
+      </mat-select>
+    </div>
+  </div>
+
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">{{"table.index" |translate}}</th>
+        <th scope="col">{{"table.title" |translate}}</th>
+        <th scope="col">{{"table.image" |translate}}</th>
+        <th scope="col">{{"table.deadLineDate" |translate}}</th>
+        <th scope="col">{{"table.desc" |translate}}</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let item of user   |  paginate: { id: 'user',
+                                                      itemsPerPage: 6,
+                                                      currentPage: page,
+                                                      totalItems: total } ;let i=index"
+      >
+        <th scope="row">{{i+1}}</th>
+        <td>{{ item.title }}</td>
+        <td>
+          <img
+            [src]="'https://crud-yt1f.onrender.com/' + item.image"
+            class="image"
+            alt=""
+          />
+        </td>
+        <td>{{ item.deadline }}</td>
+        <td>{{ item.description }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="editTask(item)">
+            {{"table.update" |translate}}
+          </button>
+          <button class="btn btn-primary" (click)="deleteTask(item._id)">
+            {{"table.delete" |translate}}
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="d-flex justify-content-center">
+    <pagination-controls (pageChange)="changePage($event)" id="user" ></pagination-controls>
+  </div>
+</div>
